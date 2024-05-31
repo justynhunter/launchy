@@ -17,7 +17,7 @@ defmodule LaunchyWeb.Router do
   scope "/", LaunchyWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", IndexLive, :home
   end
 
   # Other scopes may use custom stacks.
