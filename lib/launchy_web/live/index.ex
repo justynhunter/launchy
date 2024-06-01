@@ -13,7 +13,7 @@ defmodule LaunchyWeb.IndexLive do
     <ul class="project-list">
       <%= for project <- @projects do %>
         <li>
-          <.link navigate={"/#{project.id}/"}><%= project.name %></.link>
+          <.link navigate={"/project/#{project.id}/"}><%= project.name %></.link>
         </li>
       <% end %>
     </ul>

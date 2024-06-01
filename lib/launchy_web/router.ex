@@ -19,7 +19,7 @@ defmodule LaunchyWeb.Router do
 
     live "/", IndexLive, :home
     live "/project/create", ProjectEditLive, :create
-    live "/:project_id", ProjectLive, :project
+    live "/project/:project_id", ProjectLive, :project
   end
 
   # Other scopes may use custom stacks.
