@@ -18,6 +18,7 @@ defmodule LaunchyWeb.Router do
     pipe_through :browser
 
     live "/", IndexLive, :home
+    live "/project/create", ProjectEditLive, :create
     live "/:project_id", ProjectLive, :project
   end
 
