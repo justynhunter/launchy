@@ -19,7 +19,7 @@ unless Repo.exists?(TaskCategory) do
   project = %Project{
     name: "Fake Project",
     description: "This is a placeholder project to get started",
-    launch_date: ~U[2024-12-25 00:00:00Z]
+    launch_date: ~D[2024-12-25]
   }
   project = Repo.insert!(project)
 

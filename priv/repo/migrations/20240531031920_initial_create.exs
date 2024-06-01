@@ -5,7 +5,7 @@ defmodule Launchy.Repo.Migrations.InitialCreate do
     create table(:project) do
       add :name, :string, null: false
       add :description, :string, null: false
-      add :launch_date, :utc_datetime, null: false
+      add :launch_date, :date, null: false
       add :is_complete, :boolean, null: false, default: false
 
       add :created_at, :utc_datetime, null: false, default: fragment("NOW()")
