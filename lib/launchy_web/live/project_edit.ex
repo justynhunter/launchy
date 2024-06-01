@@ -2,7 +2,7 @@ defmodule LaunchyWeb.ProjectEditLive do
   use LaunchyWeb, :live_view
 
   alias Launchy.Repo
-  alias Launchy.Routes
+  alias Path
   alias Launchy.Project
   import Ecto.Changeset
 
@@ -51,7 +51,7 @@ defmodule LaunchyWeb.ProjectEditLive do
 
     case Repo.insert(changeset) do
       {:ok, project} ->
-        {:noreply, redirect(socket, to: Routes.project_path(socket, :project, project))}
+        {:noreply, redirect(socket, to: "/project/#{project.id}")}
 
       {:error, changeset} ->
         {:noreply, assign(socket, form: to_form(changeset))}
